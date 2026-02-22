@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy exercise alternativa 2
+on: push
+jobs:
+    lint:
+       runs-on: ubuntu-latest
+       steps:
+          - name: obtener codigo
+            uses: actions/checkout@v6
+          - name: Instalar dependencias
+            run: npm ci
+          - name: Lint
+            run: npm run lint
+    test:
+       runs-on: ubuntu-latest
+       steps:
+          - name: obtener codigo
+            uses: actions/checkout@v6
+          - name: Instalar dependencias
+            run: npm ci
+          - name: Lint
+            run: npm run lint
+          - name: correr pruebas
+            run: npm run test          
+    deploy_enfoque2:
+        runs-on: ubuntu-latest
+        steps:
+          - name: obtener codigo
+            uses: actions/checkout@v6
+          - name: Instalar dependenciaas
+            run: npm ci
+          - name: build codigo
+            run: npm run build
+          - name: Despliegue
+            run: echo "simulando despliegue"
