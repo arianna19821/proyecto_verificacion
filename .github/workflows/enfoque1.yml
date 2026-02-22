@@ -9,12 +9,12 @@ jobs:
           - name: obtener codigo
             uses: actions/checkout@v6
           - name: Instalar dependenciaas
-            uses: npm ci
+            run: npm ci
           - name: Lint
-            uses: npm run lint
+            run: npm run lint
           - name: correr pruebas
-            uses: npm run test
+            run: npm run test
           - name: build codigo
-            uses: npm run build
+            run: npm run build
           - name: Despliegue
-            uses: echo "simulando despliegue"
+            run: echo "simulando despliegue"
