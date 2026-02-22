@@ -1,0 +1,8 @@
+name: Handle Issues
+on: issues
+jobs:
+  issues_detectado:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get information
+        run: echo "${{github}}"
