@@ -14,8 +14,8 @@ jobs:
             run: npm run lint
     test:
         needs: lint
-       runs-on: ubuntu-latest
-       steps:
+        runs-on: ubuntu-latest
+        steps:
           - name: obtener codigo
             uses: actions/checkout@v6
           - name: Instalar dependencias
